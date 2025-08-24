@@ -1,0 +1,86 @@
+/* frontend/src/pages/Settings.css */
+
+.settings-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.message-banner {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid;
+}
+
+/* --- NEW: Specific styles for the error banner --- */
+.message-banner.error {
+    background-color: rgba(231, 111, 81, 0.1); /* Red background */
+    border-color: #e76f51; /* Red border */
+    color: #e76f51; /* Red text */
+}
+
+/* --- RENAMED: Changed '.message-banner' to '.message-banner.success' --- */
+.message-banner.success {
+    background-color: rgba(42, 157, 143, 0.2); /* Green background */
+    border-color: #2a9d8f; /* Green border */
+    color: #2a9d8f; /* Green text */
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.settings-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.settings-card h2 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.settings-card .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.settings-card label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.settings-card input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--font-color);
+    font-size: 1rem;
+}
+
+.settings-card button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.settings-card button:hover {
+    opacity: 0.9;
+}

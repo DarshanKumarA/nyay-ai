@@ -1,0 +1,119 @@
+/* frontend/src/pages/PersonalizeAI.css */
+
+.settings-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.settings-card.personalize-ai-card {
+  text-align: left;
+}
+
+.personalize-ai-card p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--secondary-color);
+}
+
+.personalize-ai-card button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.personalize-ai-card button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.personalize-ai-card button:disabled {
+  background-color: var(--border-color);
+  color: var(--secondary-color);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- NEW MODAL STYLES --- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-status-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--font-color);
+}
+
+.modal-status-text.error {
+  color: #ff8a8a;
+}
+
+.modal-message {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.modal-close-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-close-button:hover {
+  opacity: 0.9;
+}
+
+.success-icon {
+  color: #4caf50;
+  animation: popIn 0.5s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

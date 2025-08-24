@@ -1,0 +1,74 @@
+/* frontend/src/App.css */
+
+.app-layout {
+  display: flex;
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 292px; /* Width of sidebar + padding */
+  padding: 2rem 3rem;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* --- NEW: Custom Scrollbar Styles --- */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* --- END NEW --- */
+
+
+.main-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.login-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+}
+
+.page-content {
+  padding-top: 1rem;
+}
+
+.page-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.page-content p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}

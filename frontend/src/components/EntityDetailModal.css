@@ -1,0 +1,137 @@
+/* frontend/src/components/EntityDetailModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: slideInUp 0.4s ease;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.7;
+  /* 'color' property removed as it's not the correct property for the SVG lines */
+}
+
+/* Style the SVG icon directly */
+.modal-close-button svg {
+  width: 18px;
+  height: 18px;
+  /* --- PROFESSIONAL FIX: Use 'stroke' to color the SVG lines --- */
+  stroke: white;
+}
+
+.modal-close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2.5rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.context-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.context-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  line-height: 1.6;
+}
+
+.context-list li:last-child {
+  border-bottom: none;
+}
+
+.context-list strong {
+  background-color: rgba(252, 163, 17, 0.2);
+  color: #fca311;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.no-results p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Custom scrollbar styles for a modern look */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 10px;
+  border: 2px solid var(--card-color);
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}

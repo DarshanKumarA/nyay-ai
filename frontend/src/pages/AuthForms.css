@@ -1,0 +1,187 @@
+/* frontend/src/pages/AuthForms.css */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.auth-form {
+  background-color: var(--card-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--font-color);
+  font-size: 1rem;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+.error-message {
+  color: #e57373;
+  background-color: rgba(229, 115, 115, 0.1);
+  border: 1px solid #e57373;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.success-message {
+  color: #4db6ac;
+  background-color: rgba(77, 182, 172, 0.1);
+  border: 1px solid #4db6ac;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.auth-switch a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 38px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* --- NEW: "Tipping Hat" Loading Animation Styles --- */
+
+.loading-container {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.loader {
+  display: inline-block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loader p {
+  margin-top: 2rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.tipping-hat-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  overflow: hidden; /* Important for the glaze effect */
+}
+
+.tipping-hat {
+  width: 100%;
+  height: 100%;
+}
+
+.tipping-hat .hat-group {
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+  transform-origin: 50% 50%;
+  animation: tip 4s ease-in-out infinite;
+}
+
+.tipping-hat-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 150%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-200%) translateY(-25%) rotate(-45deg);
+  animation: glaze 3s ease-in-out infinite;
+}
+
+@keyframes tip {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes glaze {
+  0% { transform: translateX(-200%) translateY(-25%) rotate(-45deg); }
+  100% { transform: translateX(200%) translateY(25%) rotate(-45deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

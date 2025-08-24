@@ -1,0 +1,23 @@
+# --- Environment Variables ---
+.env
+
+# --- Python Dependencies & Caches ---
+venv/
+__pycache__/
+*.pyc
+
+# --- Sensitive User Data & Databases ---
+nyay_ai_main.db
+case_documents/
+user_dbs/
+user_chroma_dbs/
+user_models/
+
+# --- Frontend Dependencies & Caches ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# --- Editor & OS Files ---
+.vscode/
+.DS_Store

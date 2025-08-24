@@ -1,0 +1,107 @@
+/* frontend/src/components/Sidebar.css */
+
+.sidebar {
+  background-color: var(--card-color);
+  width: 260px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-right: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.sidebar-nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--primary-color);
+}
+
+.sidebar-nav a.active {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.sidebar-footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-footer a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--primary-color);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Add this to the end of Sidebar.css */
+.user-avatar {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--primary-color);
+}

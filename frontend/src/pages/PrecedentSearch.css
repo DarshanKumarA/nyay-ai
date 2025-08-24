@@ -1,0 +1,144 @@
+/* frontend/src/pages/PrecedentSearch.css */
+
+.precedent-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Upload Section Styles */
+.upload-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.upload-box {
+  flex-grow: 1;
+  border: 2px dashed var(--border-color);
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--secondary-color);
+  transition: all 0.2s ease;
+}
+
+.upload-box:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.upload-section button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.upload-section button:disabled {
+  background-color: var(--border-color);
+  color: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+/* Analysis Results Styles */
+.analysis-result {
+  margin-top: 3rem;
+  background-color: var(--card-color);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.analysis-result h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.precedent-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.precedent-card {
+  background-color: rgba(0,0,0,0.2);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.75rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* --- UPDATED: Changed the default button color to be more visible --- */
+.feedback-button {
+  background-color: #f0f0f0; /* Light background */
+  color: #1a1a1a; /* Dark text */
+  border: 1px solid #ccc; /* Light border */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-weight: 500; /* Make text bolder */
+}
+
+.feedback-button:hover:not(:disabled) {
+  background-color: #fff; /* Brighten on hover */
+}
+
+.feedback-button.success {
+  background-color: #2a9d8f;
+  color: white;
+  border-color: #2a9d8f;
+  cursor: default;
+}
+
+.feedback-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.precedent-details h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.precedent-details p {
+  margin-top: 0;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+.conclusion-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
